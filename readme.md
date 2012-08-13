@@ -42,6 +42,24 @@ $ vagrant up
 $ vagrant down
 ...
 ```
+
+Puppet Provisioning
+============
+Required setup
+--------------
+- System
+ - git
+- Web
+ - mysql
+ - php 5.4
+ - apache2
+ - phpmyadmin
+- Frameworks
+ - cakephp
+- Optional
+ - xdebug
+ - pear
+ - composer
  
  [Vagrant]: http://downloads.vagrantup.com/tags/v1.0.3
  [VirtualBox]: http://www.virtualbox.org/wiki/Downloads
