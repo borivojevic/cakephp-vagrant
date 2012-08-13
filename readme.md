@@ -1,6 +1,7 @@
 Setup Vagrant Instance
 =======================
 - Download and install [Vagrant][]
+Vagrant depends on Oracle's [VirtualBox][] to create all of its virtual environments.
 
 - Create project directory and setup required files
 
@@ -10,10 +11,10 @@ $ cd vagrant_php
 $ vagrant init
 ```
 
-- Download a base box wich has a bare bones installation of Ubuntu Lucid (10.04) 32-bit
+- Download  which has a bare bones installation of Ubuntu Lucid (10.04) 32-bit
 
 ```sh
-$ vagrant box add base http://files.vagrantup.com/lucid32.box
+$ vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
 ```
 
 - Configure the project to use the box
@@ -43,3 +44,4 @@ $ vagrant down
 ```
  
  [Vagrant]: http://downloads.vagrantup.com/tags/v1.0.3
+ [VirtualBox]: http://www.virtualbox.org/wiki/Downloads
