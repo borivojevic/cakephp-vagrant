@@ -1,5 +1,7 @@
 Setup Vagrant Instance
 =======================
+- Download and install [Vagrant][]
+
 - Create project directory and setup required files
 
 ```sh
@@ -39,3 +41,5 @@ $ vagrant up
 $ vagrant down
 ...
 ```
+ 
+ [Vagrant]: http://downloads.vagrantup.com/tags/v1.0.3
