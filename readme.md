@@ -63,3 +63,8 @@ Required setup
  
  [Vagrant]: http://downloads.vagrantup.com/tags/v1.0.3
  [VirtualBox]: http://www.virtualbox.org/wiki/Downloads
+ 
+ Troubleshooting
+ ===================
+ 
+Vagrant sometimes hangs on "Waiting for VM to boot. This can take a few minutes". To fix this enable GUI mode in Vagrant configuration, login in VirtualBox and run "sudo dhclient".
