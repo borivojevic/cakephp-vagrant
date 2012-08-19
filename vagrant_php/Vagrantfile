@@ -26,6 +26,7 @@ Vagrant::Config.run do |config|
   # Enable and configure the puppet provisioner
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet"
+    puppet.module_path = "modules"
     puppet.manifest_file  = "base.pp"
   end
 end

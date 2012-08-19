@@ -14,8 +14,7 @@ class ubuntu {
 
     # update once
     exec {"apt-get-update":
-        creates => "/updated",
-        command => "apt-get update && touch /updated",
+        command => "apt-get update",
     }
 }
 
@@ -55,45 +54,11 @@ class apache2 {
     }
 }
 
-class php {
-    $php = ["php5-cli", "php5-mysql", "libapache2-mod-php5", "php-pear"]
-    package { $php: ensure => "installed" }
-
-    $include = '.:/usr/share/php:/vagrant/src/cakephp/lib/'
-    $cliini = '/etc/php5/cli/php.ini'
-    $apacheini = '/etc/php5/apache2/php.ini'
-    exec { "cli-include-path":
-        subscribe => Package["php5-cli"],
-        unless => "grep -q ^include_path $cliini",
-        command => "echo include_path = $include >> $cliini",
-        notify  => Service["apache2"],
-    } ->
-    exec { "apache-include-path":
-        unless => "grep -q ^include_path $apacheini",
-        command => "echo include_path = $include >> $apacheini",
-        notify  => Service["apache2"],
-    } ->
-    exec { "mod-php":
-        unless => "ls /etc/apache2/mods-enabled/php5*",
-        command => "a2enmod php5",
-        notify  => Service["apache2"],
-    } ->
-    exec { "phpunit":
-        creates => "/usr/bin/phpunit",
-        command => "pear upgrade pear && \
-                    pear channel-discover pear.phpunit.de && \
-                    pear channel-discover components.ez.no && \
-                    pear channel-discover pear.symfony-project.com && \
-                    pear install --alldeps phpunit/PHPUnit",
-        require => Package["php-pear"],
-    }
-}
-
 # Create some synchronization between operations
 class cakephpbox {
     class { "ubuntu": }
 	class { "apache2": require => Exec['apt-get-update'], }
-	class { "php": require => Exec['apt-get-update'], }
+	class { "php54": require => Exec['apt-get-update'], }
 }
 
 # Tell Puppet to run the cakephpbox class at boot time:
