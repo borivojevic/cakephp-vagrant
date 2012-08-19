@@ -16,6 +16,9 @@ class ubuntu {
     exec {"apt-get-update":
         command => "apt-get update",
     }
+
+    $tools = ["vim", "curl", "git"]
+    package { $tools: ensure => "installed" }
 }
 
 class apache2 {
