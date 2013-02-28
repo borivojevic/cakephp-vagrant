@@ -89,11 +89,26 @@ class php {
     }
 }
 
+class mysql-server {
+    $password = "root"
+    package { "mysql-client": ensure => installed }
+    package { "mysql-server": ensure => installed }
+
+    exec { "Set MySQL server root password":
+        subscribe => [ Package["mysql-server"], Package["mysql-client"] ],
+        refreshonly => true,
+        unless => "mysqladmin -uroot -p$password status",
+        path => "/bin:/usr/bin",
+        command => "mysqladmin -uroot password $password",
+    }
+}
+
 # Create some synchronization between operations
 class cakephpbox {
     class { "ubuntu": }
-	class { "apache2": require => Exec['apt-get-update'], }
-	class { "php": require => Exec['apt-get-update'], }
+    class { "apache2": require => Exec['apt-get-update'], }
+    class { "php": require => Exec['apt-get-update'], }
+    class { "mysql-server": require => Exec['apt-get-update'], }
 }
 
 # Tell Puppet to run the cakephpbox class at boot time:
