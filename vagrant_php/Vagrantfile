@@ -10,7 +10,7 @@ Vagrant::Config.run do |config|
   # Turn off when no necessary
   config.vm.boot_mode = :gui
 
-  config.vm.host_name = "dev1.projectname.com"
+  config.vm.host_name = "dev.mirkoborivojevic.localhost"
 
   #config.vm.network :hostonly, "192.168.33.10"
 
