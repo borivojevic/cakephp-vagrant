@@ -45,13 +45,13 @@ class apache2 {
     } ->
     file { "/var/www/app":
         ensure => link,
-        target => "/vagrant/src/app",
+        target => "/vagrant/application",
     } ->
     service { "apache2":
         ensure => running,
         hasstatus => true,
         hasrestart => true,
-        require => Package["apache2"],
+        require => Package["apache2"]
     }
 }
 
