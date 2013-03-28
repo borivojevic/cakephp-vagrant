@@ -25,9 +25,9 @@ Packages installed
 - php5-mysql
 - php5-dev
 - php-pear
--- PHPUnit
--- PHP_CodeSniffer
--- CakePHP_CodeSniffer
+ - PHPUnit
+ - PHP_CodeSniffer
+ - CakePHP_CodeSniffer
 - mysql-server
 
 
