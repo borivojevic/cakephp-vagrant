@@ -35,7 +35,13 @@ class php::pear {
 	}
 
 	# install phpunit
-	exec { "pear install phpunit/PHPUnit":
+	exec { "pear install phpunit/File_Iterator":
+		require => Exec["pear clear-cache"]
+	}
+	exec { "pear install phpunit/Text_Template":
+		require => Exec["pear clear-cache"]
+	}
+	exec { "pear install --force --alldeps pear.phpunit.de/PHPUnit":
 		require => Exec["pear clear-cache"]
 	}
 
