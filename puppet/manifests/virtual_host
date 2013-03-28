@@ -1,0 +1,15 @@
+NameVirtualHost *:4567
+<VirtualHost *:4567>
+        ServerAdmin     mirko@mirkoborivojevic.com
+        ServerName      dev.mirkoborivojevic.localhost
+        ServerAlias     mirkoborivojevic.localhost
+
+        DocumentRoot /vagrant/webroot
+
+        <Directory /vagrant/webroot>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+</VirtualHost>
