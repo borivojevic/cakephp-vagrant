@@ -9,11 +9,11 @@ Requirements:
 Installation:
 ---------------
 - Download and install required software
-- git clone git://github.com/borivojevic/vagrant-setup.git
+- `git clone git://github.com/borivojevic/vagrant-setup.git`
 - Place application source code into webroot folder
 - Add `127.0.0.1 dev.mirkoborivojevic.localhost` to hosts file
 - Run terminal and execute `vagrant up`
-- Run web browser and go to dev.mirkoborivojevic.localhost:8888
+- Run web browser and go to `dev.mirkoborivojevic.localhost:8888`
 - To turn off virtual machine execute `vagrant down`
 - To clean up execute `vagrant destroy`
 
@@ -31,7 +31,7 @@ Packages installed
 - mysql-server
 
 
-Nice to have (not yet installed)
+Nice to have (not installed yet)
 --------------------------------
 - git
 - phpmyadmin
