@@ -23,6 +23,9 @@ Vagrant::Config.run do |config|
 	# folder, and the third is the path on the host to the actual folder.
 	# config.vm.share_folder "v-data", "/vagrant_data", "../data"
 
+	# Support symbolic linking in VirtualBox shared folders
+	config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+
 	# Enable and configure the puppet provisioner
 	config.vm.provision :puppet do |puppet|
 		puppet.manifests_path = "puppet/manifests"
