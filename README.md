@@ -30,15 +30,17 @@ Packages installed
  - PHP_CodeSniffer
  - CakePHP_CodeSniffer
 - mysql-server
+- git-core
+- vim
+- curl
+- composer
 
 
 Nice to have (not installed yet)
 --------------------------------
-- git
 - phpmyadmin
 - cakephp
 - xdebug
-- composer
 
 [Vagrant]: http://downloads.vagrantup.com/tags/v1.0.3
 [VirtualBox]: http://www.virtualbox.org/wiki/Downloads
