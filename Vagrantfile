@@ -12,7 +12,7 @@ Vagrant::Config.run do |config|
 
 	config.vm.host_name = "dev.mirkoborivojevic.localhost"
 
-	#config.vm.network :hostonly, "192.168.33.10"
+	#config.vm.network :hostonly, "33.33.33.10"
 
 	# Forward a port from the guest to the host, which allows for outside
 	# computers to access the VM, whereas host only networking does not.
