@@ -3,7 +3,7 @@ Setup Vagrant Instance
 
 ## Overview
 
-Vagrant is a great tool to automate creating and configuring lightweight, reproducible, and portable development environments. If you are new to Vagrant you might want to take a look at [official documentation][http://docs.vagrantup.com/v2/why-vagrant/index.html] to get a basic gist who is it for and why to use it.
+Vagrant is a great tool to automate creating and configuring lightweight, reproducible, and portable development environments. If you are new to Vagrant you might want to take a look at [official documentation](http://docs.vagrantup.com/v2/why-vagrant/index.html) to get a basic gist who is it for and why to use it.
 
 ## Host OS software prerequisites:
 
@@ -52,10 +52,10 @@ Vagrant is a great tool to automate creating and configuring lightweight, reprod
 ## TODO
 
 - Additional libraries
--- phpmyadmin
--- cakephp
--- xdebug
--- Add PHP 5.4 support
+ - phpmyadmin
+ - cakephp
+ - xdebug
+- Add PHP 5.4 support
 - Support multiple projects and mountpoints in Vagrantfile (see http://goo.gl/TDACB)
 
 [Vagrant]: http://downloads.vagrantup.com/tags/v1.0.3
