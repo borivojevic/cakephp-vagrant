@@ -1,4 +1,4 @@
-Setup Vagrant Instance
+Install basic CakePHP development box using Vagrant and Puppet
 =======================
 
 ## Overview
