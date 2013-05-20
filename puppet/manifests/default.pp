@@ -11,6 +11,7 @@ class cakephpbox {
     class { "php": require => Exec['apt-get-update'], }
     class { "php::pear": require => Exec['apt-get-update'], }
     class { "mysql-server": require => Exec['apt-get-update'], }
+    class { "phpmyadmin": require => Exec['apt-get-update'], }
     class { "composer": require => Exec['apt-get-update'], }
 }
 

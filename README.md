@@ -44,6 +44,7 @@ Vagrant is a great tool to automate creating and configuring lightweight, reprod
  - PHP_CodeSniffer
  - CakePHP_CodeSniffer
 - mysql-server
+- phpMyAdmin
 - git-core
 - vim
 - curl
@@ -52,7 +53,6 @@ Vagrant is a great tool to automate creating and configuring lightweight, reprod
 ## TODO
 
 - Additional libraries
- - phpmyadmin
  - cakephp
  - xdebug
 - Add PHP 5.4 support

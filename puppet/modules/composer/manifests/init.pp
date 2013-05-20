@@ -7,10 +7,6 @@ class composer {
         require => [ Package["php5-cli"] ]
     }
 
-    file { "/home/vagrant/bin":
-        ensure => directory
-    }
-
     file { "/home/vagrant/bin/composer.phar":
         ensure => present,
         source => "/home/vagrant/composer.phar",
