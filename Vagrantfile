@@ -11,11 +11,7 @@ Vagrant.configure("2") do |config|
 	# config.vm.boot_mode = :gui
 
 	config.vm.hostname  = "dev.mirkoborivojevic.localhost"
-
-	#config.vm.network :hostonly, "33.33.33.10"
-
-	# Forward a port from the guest to the host, which allows for outside
-	# computers to access the VM, whereas host only networking does not.
+	config.vm.network :private_network, ip: "33.33.33.10"
 	config.vm.network :forwarded_port, guest: 80, host: 8888
 
 	# Share an additional folder to the guest VM. The first argument is
