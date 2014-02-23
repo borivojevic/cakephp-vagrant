@@ -18,7 +18,7 @@ Vagrant is a great tool to automate creating and configuring lightweight, reprod
 - Place application source code into cakephp-vagrant/webroot folder
 - On the host machine, add a new line to your `hosts` file pointing to vagrant box' `33.33.33.10 dev.mirkoborivojevic.localhost`
 - Run `vagrant up` to provision machine
-- Run web browser and go to `dev.mirkoborivojevic.localhost:8888`
+- Run web browser and go to `http://dev.mirkoborivojevic.localhost`
 - To log in to vagrant box execute `ssh vagrant@127.0.0.1 -p 2222`
 - To turn off virtual machine execute `vagrant down`
 - To clean up execute `vagrant destroy`
@@ -35,7 +35,7 @@ Vagrant is a great tool to automate creating and configuring lightweight, reprod
 ## Packages and libraries that come with the box
 
 - apache2
-- php5 (5.3)
+- php5 (5.5)
 - php5-cli
 - php5-mysql
 - php5-dev
@@ -55,7 +55,6 @@ Vagrant is a great tool to automate creating and configuring lightweight, reprod
 - Additional libraries
  - cakephp
  - xdebug
-- Add PHP 5.4 support
 - Support multiple projects and mountpoints in Vagrantfile (see http://goo.gl/TDACB)
 
 [Vagrant]: http://downloads.vagrantup.com/tags/v1.0.3

@@ -8,7 +8,7 @@ class apache2 {
 		require => Package["apache2"]
 	}
 
-	file { "/etc/apache2/sites-available/default":
+	file { "/etc/apache2/sites-available/000-default.conf":
 		ensure => present,
 		source => "/vagrant/puppet/templates/vhost",
 		require => Package["apache2"]
@@ -20,7 +20,7 @@ class apache2 {
 		require => Package["apache2"],
 		subscribe => [
 			File["/etc/apache2/mods-enabled/rewrite.load"],
-			File["/etc/apache2/sites-available/default"]
+			File["/etc/apache2/sites-available/000-default.conf"]
 		],
 	}
 }

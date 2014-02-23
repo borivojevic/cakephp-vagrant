@@ -13,6 +13,7 @@
         AllowOverride All
         Order allow,deny
         allow from all
+        Require all granted
     </Directory>
 
     ErrorLog /var/log/apache2/error.log

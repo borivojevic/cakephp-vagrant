@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
 	# Vagrant virtual environment running an Ubuntu 10.04 box
-	config.vm.box = "lucid32"
-	config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
+	config.vm.box = "precise64"
+	config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
 	# Boot with a GUI for easy debugging
 	# Turn off when no necessary
