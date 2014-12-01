@@ -17,10 +17,11 @@ Vagrant is a great tool to automate creating and configuring lightweight, reprod
     `git clone git://github.com/borivojevic/cakephp-vagrant.git`
 - Place application source code into cakephp-vagrant/webroot folder
 - On the host machine, add a new line to your `hosts` file pointing to vagrant box' `33.33.33.10 dev.mirkoborivojevic.localhost`
-- Run `vagrant up` to provision machine
+- Run `vagrant up` to start and provision the machine
 - Run web browser and go to `http://dev.mirkoborivojevic.localhost`
 - To log in to vagrant box execute `ssh vagrant@127.0.0.1 -p 2222`
-- To turn off virtual machine execute `vagrant down`
+- To turn off virtual machine execute `vagrant halt`
+- To start the virtual machine again execute `vagrant up`
 - To clean up execute `vagrant destroy`
 
 ## Default connection parameters
